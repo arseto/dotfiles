@@ -72,3 +72,7 @@ if has('gui_running')
   set guioptions-=L  "remove left-hand scroll bar
 endif
 
+" Syntastic php
+let g:syntastic_phpcs_disable = 1
+let g:syntastic_phpmd_disable = 1
+let g:syntastic_php_checkers = ['php']
