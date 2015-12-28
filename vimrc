@@ -65,7 +65,7 @@ set background=dark
 colorscheme solarized
 
 if has('gui_running')
-  set guifont=Inconsolata\ Medium\ 11
+  set guifont=Inconsolata-dz\ Medium\ 10
   set guioptions-=m  "remove menu bar
   set guioptions-=T  "remove toolbar
   set guioptions-=r  "remove right-hand scroll bar
