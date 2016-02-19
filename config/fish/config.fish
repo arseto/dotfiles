@@ -6,8 +6,12 @@ alias ssh_tawon='ssh arseto@162.243.246.210'
 alias ssh_tawon_root='ssh root@162.243.246.210'
 alias ssh_uhui='ssh root@uhui.kulina.id'
 alias ssh_uhuk='ssh root@128.199.82.132'
+alias ssh_gembus='ssh root@128.199.121.182'
+alias ssh_tiwul='ssh root@128.199.187.111'
+alias ssh_lopis='ssh root@188.166.245.0'
 
 alias glc="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
-set PATH /home/arseto/.gem/ruby/2.2.0/bin $PATH 
+set PATH /home/arseto/.gem/ruby/2.2.0/bin /home/arseto/.local/bin $PATH 
 
 set -x GOPATH $HOME/go
+set -gx PATH $GOPATH/bin $PATH

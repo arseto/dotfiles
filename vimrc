@@ -61,10 +61,10 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 set laststatus=2
 
 syntax enable
-set background=dark
-colorscheme solarized
 
 if has('gui_running')
+  set background=dark
+  colorscheme solarized
   set guifont=Inconsolata-dz\ Medium\ 10
   set guioptions-=m  "remove menu bar
   set guioptions-=T  "remove toolbar
