@@ -9,9 +9,18 @@ alias ssh_uhuk='ssh root@128.199.82.132'
 alias ssh_gembus='ssh root@128.199.121.182'
 alias ssh_tiwul='ssh root@128.199.187.111'
 alias ssh_lopis='ssh root@188.166.245.0'
+alias ssh_nogosari='ssh root@128.199.251.62'
+alias ssh_lemper='ssh root@128.199.140.114'
 
-alias glc="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
-set PATH /home/arseto/.gem/ruby/2.2.0/bin /home/arseto/.local/bin $PATH 
+#GIT
+alias glcc="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+alias gpr="git pull --rebase"
+alias gpush="git push"
+alias gstat="git status"
+alias gch="git checkout"
+alias gbr="git branch"
+
+set PATH /home/arseto/.gem/ruby/2.2.0/bin /home/arseto/.local/bin /home/arseto/.gem/ruby/2.3.0/bin $PATH
 
 set -x GOPATH $HOME/go
 set -gx PATH $GOPATH/bin $PATH
