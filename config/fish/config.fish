@@ -20,7 +20,7 @@ alias gstat="git status"
 alias gch="git checkout"
 alias gbr="git branch"
 
-set PATH /home/arseto/.gem/ruby/2.2.0/bin /home/arseto/.local/bin /home/arseto/.gem/ruby/2.3.0/bin $PATH
+set PATH /home/arseto/.gem/ruby/2.2.0/bin /home/arseto/.local/bin /home/arseto/.gem/ruby/2.3.0/bin /home/arseto/.npm-packages/bin/ $PATH
 
 set -x GOPATH $HOME/go
 set -gx PATH $GOPATH/bin $PATH

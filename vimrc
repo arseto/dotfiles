@@ -60,7 +60,12 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 " airline
 set laststatus=2
 
+" Autocomplete
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+
 syntax enable
+set nu
 
 if has('gui_running')
   set background=dark
@@ -70,10 +75,12 @@ if has('gui_running')
   set guioptions-=T  "remove toolbar
   set guioptions-=r  "remove right-hand scroll bar
   set guioptions-=L  "remove left-hand scroll bar
-  set nu
 endif
 
 " Syntastic php
 let g:syntastic_phpcs_disable = 1
 let g:syntastic_phpmd_disable = 1
 let g:syntastic_php_checkers = ['php']
+
+" File browser with NERDTree
+nnoremap <C-g> :NERDTreeToggle<CR>
