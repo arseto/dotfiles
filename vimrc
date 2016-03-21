@@ -24,12 +24,6 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
-" Get off my lawn
-nnoremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>
-
 " Softtabs, 4 spaces
 set tabstop=4
 set shiftwidth=4
@@ -67,9 +61,9 @@ set omnifunc=syntaxcomplete#Complete
 syntax enable
 set nu
 
+set background=dark
+colorscheme solarized
 if has('gui_running')
-  set background=dark
-  colorscheme solarized
   set guifont=Inconsolata-dz\ Medium\ 10
   set guioptions-=m  "remove menu bar
   set guioptions-=T  "remove toolbar
@@ -84,3 +78,7 @@ let g:syntastic_php_checkers = ['php']
 
 " File browser with NERDTree
 nnoremap <C-g> :NERDTreeToggle<CR>
+
+" Set leader key
+let mapleader = "-"
+
