@@ -1,5 +1,6 @@
 " Pathogen
 execute pathogen#infect()
+set shell=/bin/bash
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
@@ -49,7 +50,7 @@ augroup vimrcEx
 augroup END
 
 " CTRL P
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+" set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " airline
 set laststatus=2
@@ -61,10 +62,14 @@ set omnifunc=syntaxcomplete#Complete
 syntax enable
 set nu
 
-set background=dark
-colorscheme solarized
+set term=screen-256color
+let g:solarized_termcolors=256
+set t_Co=256
+
 if has('gui_running')
-  set guifont=Inconsolata-dz\ Medium\ 10
+  colorscheme solarized
+  set background=dark
+  set guifont=Inconsolata\ Medium\ 12
   set guioptions-=m  "remove menu bar
   set guioptions-=T  "remove toolbar
   set guioptions-=r  "remove right-hand scroll bar

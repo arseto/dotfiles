@@ -11,6 +11,7 @@ alias ssh_tiwul='ssh root@128.199.187.111'
 alias ssh_lopis='ssh root@188.166.245.0'
 alias ssh_nogosari='ssh root@128.199.251.62'
 alias ssh_lemper='ssh root@128.199.140.114'
+alias ssh_ebstag='ssh ec2-user@api.staging.kulina.id'
 
 #GIT
 alias glcc="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
@@ -20,7 +21,8 @@ alias gstat="git status"
 alias gch="git checkout"
 alias gbr="git branch"
 
-set PATH /home/arseto/.gem/ruby/2.2.0/bin /home/arseto/.local/bin /home/arseto/.gem/ruby/2.3.0/bin /home/arseto/.npm-packages/bin/ ~/.composer/vendor/bin/ $PATH
+set PATH ~/.gem/ruby/2.2.0/bin /home/arseto/.local/bin /home/arseto/.gem/ruby/2.3.0/bin /home/arseto/.npm-packages/bin/ ~/.composer/vendor/bin/ $PATH
 
 set -x GOPATH $HOME/go
 set -gx PATH $GOPATH/bin $PATH
+rvm default
