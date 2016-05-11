@@ -14,7 +14,7 @@ alias ssh_lemper='ssh root@128.199.140.114'
 alias ssh_ebstag='ssh ec2-user@api.staging.kulina.id'
 
 #GIT
-alias glc="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+alias glcc="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 alias gpr="git pull --rebase"
 alias gpush="git push"
 alias gstat="git status"
