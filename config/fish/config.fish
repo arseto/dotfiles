@@ -26,4 +26,3 @@ set PATH ~/.gem/ruby/1.9.1/bin ~/.gem/ruby/2.2.0/bin ~/.local/bin ~/.gem/ruby/2.
 
 set -x GOPATH $HOME/go
 set -gx PATH $GOPATH/bin $PATH
-rvm default
