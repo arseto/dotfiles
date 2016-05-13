@@ -21,7 +21,7 @@ alias gstat="git status"
 alias gch="git checkout"
 alias gbr="git branch"
 
-set PATH ~/.gem/ruby/2.2.0/bin ~/.local/bin ~/.gem/ruby/2.3.0/bin ~/.npm-packages/bin/ ~/.composer/vendor/bin/ ~/local/bin $PATH
+set PATH ~/.gem/ruby/2.2.0/bin ~/.local/bin ~/.gem/ruby/2.3.0/bin ~/.npm-packages/bin/ ~/.composer/bin/ ~/.composer/vendor/bin/ ~/local/bin $PATH
 
 set -x GOPATH $HOME/go
 set -gx PATH $GOPATH/bin $PATH
