@@ -22,7 +22,7 @@ alias gch="git checkout"
 alias gbr="git branch"
 alias gac="git commit -am"
 
-set PATH ~/.gem/ruby/1.9.1/bin ~/.gem/ruby/2.2.0/bin ~/.local/bin ~/.gem/ruby/2.3.0/bin ~/.npm-packages/bin/ ~/.composer/bin/ ~/.composer/vendor/bin/ ~/local/bin $PATH
+set PATH ~/.gem/ruby/1.9.1/bin ~/.gem/ruby/2.2.0/bin ~/.local/bin ~/.gem/ruby/2.3.0/bin ~/.npm-packages/bin/ ~/.composer/bin/ ~/.composer/vendor/bin/ ~/local/bin ~/.conscript/bin/ $PATH
 
 set -x GOPATH $HOME/go
 set -gx PATH $GOPATH/bin $PATH
