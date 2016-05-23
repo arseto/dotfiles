@@ -93,3 +93,5 @@ nnoremap <C-g> :NERDTreeToggle<CR>
 " Set leader key
 let mapleader = "-"
 
+" Supertab configuration
+let g:SuperTabDefaultCompletionType = ""
