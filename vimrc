@@ -68,13 +68,13 @@ set omnifunc=syntaxcomplete#Complete
 syntax enable
 set nu
 
-set term=screen-256color
-let g:solarized_termcolors=256
-set t_Co=256
+" set term=screen-256color
+" let g:solarized_termcolors=256
+" set t_Co=256
+set background=dark
+colorscheme solarized
 
 if has('gui_running')
-  colorscheme solarized
-  set background=dark
   set guifont=Inconsolata\ Medium\ 12
   set guioptions-=m  "remove menu bar
   set guioptions-=T  "remove toolbar
