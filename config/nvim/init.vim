@@ -14,7 +14,14 @@ call plug#begin('~/.config/site/plugged')
   Plug 'stephpy/vim-php-cs-fixer'
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-surround'
+  Plug 'fatih/vim-go'
 call plug#end()
+
+" NETRW style
+let g:netrw_liststyle=3
+
+" CTRLP
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
@@ -107,5 +114,16 @@ nnoremap <C-g> :NERDTreeToggle<CR>
 " Set leader key
 let mapleader = "-"
 
+map <leader>k :Explore<CR>
+
 " Supertab configuration
 let g:SuperTabDefaultCompletionType = ""
+
+" Golang plugin
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_interfaces = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
