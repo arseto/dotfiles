@@ -15,6 +15,9 @@ call plug#begin('~/.config/site/plugged')
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-surround'
   Plug 'fatih/vim-go'
+  Plug 'jeetsukumaran/vim-buffergator'
+  Plug 'rking/ag.vim'
+  Plug 'vim-scripts/taglist.vim'
 call plug#end()
 
 " NETRW style
@@ -73,6 +76,11 @@ augroup END
 " CTRL P
 " set runtimepath^=~/.vim/bundle/ctrlp.vim
 
+" status line
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
 " airline
 set laststatus=2
 let g:airline_theme='luna'
@@ -103,6 +111,17 @@ if has('gui_running')
   set guioptions-=L  "remove left-hand scroll bar
 endif
 
+" Syntastic global
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" Syntastic golang
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+let g:go_list_type = "quickfix"
+
 " Syntastic php
 let g:syntastic_phpcs_disable = 1
 let g:syntastic_phpmd_disable = 1
@@ -117,7 +136,7 @@ let mapleader = "-"
 map <leader>k :Explore<CR>
 
 " Supertab configuration
-let g:SuperTabDefaultCompletionType = ""
+let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 
 " Golang plugin
 let g:go_highlight_functions = 1
@@ -127,3 +146,4 @@ let g:go_highlight_structs = 1
 let g:go_highlight_interfaces = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+
