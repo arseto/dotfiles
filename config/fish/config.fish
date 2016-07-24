@@ -27,7 +27,7 @@ set PATH ~/.gem/ruby/1.9.1/bin ~/.gem/ruby/2.2.0/bin ~/.local/bin ~/.gem/ruby/2.
 
 set -x GOPATH $HOME/go
 set -gx PATH $GOPATH/bin $PATH
-set -gx JAVA_HOME /usr/lib/jvm/java-8-oracle/
+set -gx JAVA_HOME /usr/lib/jvm/java-8-openjdk/
 
 set -gx GRADLE_HOME /opt/gradle-2.13
 set PATH $GRADLE_HOME/bin $PATH

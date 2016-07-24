@@ -18,6 +18,9 @@ call plug#begin('~/.config/site/plugged')
   Plug 'jeetsukumaran/vim-buffergator'
   Plug 'rking/ag.vim'
   Plug 'vim-scripts/taglist.vim'
+  Plug 'danro/rename.vim'
+  Plug 'jiangmiao/auto-pairs'
+  Plug 'bronson/vim-trailing-whitespace'
 call plug#end()
 
 " NETRW style
