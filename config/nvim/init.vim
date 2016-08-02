@@ -4,7 +4,7 @@ call plug#begin('~/.config/site/plugged')
   Plug 'shawncplus/phpcomplete.vim'
   Plug 'StanAngeloff/php.vim'
   Plug 'ervandew/supertab'
-  Plug 'scrooloose/syntastic'
+  Plug 'neomake/neomake'
   Plug 'edkolev/tmuxline.vim'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
@@ -21,6 +21,7 @@ call plug#begin('~/.config/site/plugged')
   Plug 'danro/rename.vim'
   Plug 'jiangmiao/auto-pairs'
   Plug 'bronson/vim-trailing-whitespace'
+  Plug 'scrooloose/syntastic'
 call plug#end()
 
 " NETRW style

@@ -1,5 +1,28 @@
-" Pathogen
-execute pathogen#infect()
+call plug#begin('~/.config/site/plugged')
+  Plug 'ctrlpvim/ctrlp.vim'
+  Plug 'scrooloose/nerdtree'
+  Plug 'shawncplus/phpcomplete.vim'
+  Plug 'StanAngeloff/php.vim'
+  Plug 'ervandew/supertab'
+  Plug 'scrooloose/syntastic'
+  Plug 'edkolev/tmuxline.vim'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+  Plug 'altercation/vim-colors-solarized'
+  Plug 'tpope/vim-fugitive'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'stephpy/vim-php-cs-fixer'
+  Plug 'tpope/vim-repeat'
+  Plug 'tpope/vim-surround'
+  Plug 'fatih/vim-go'
+  Plug 'jeetsukumaran/vim-buffergator'
+  Plug 'rking/ag.vim'
+  Plug 'vim-scripts/taglist.vim'
+  Plug 'danro/rename.vim'
+  Plug 'jiangmiao/auto-pairs'
+  Plug 'bronson/vim-trailing-whitespace'
+call plug#end()
+
 set shell=/bin/bash
 
 " Switch syntax highlighting on, when the terminal has colors
