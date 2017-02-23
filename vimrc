@@ -4,7 +4,7 @@ call plug#begin('~/.config/site/plugged')
   Plug 'shawncplus/phpcomplete.vim'
   Plug 'StanAngeloff/php.vim'
   Plug 'ervandew/supertab'
-  Plug 'scrooloose/syntastic'
+  Plug 'neomake/neomake'
   Plug 'edkolev/tmuxline.vim'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
@@ -19,11 +19,28 @@ call plug#begin('~/.config/site/plugged')
   Plug 'rking/ag.vim'
   Plug 'vim-scripts/taglist.vim'
   Plug 'danro/rename.vim'
-  Plug 'jiangmiao/auto-pairs'
+  " Plug 'jiangmiao/auto-pairs'
   Plug 'bronson/vim-trailing-whitespace'
+  Plug 'scrooloose/syntastic'
+  Plug 'vim-scripts/groovy.vim'
+  Plug 'yegappan/mru'
+  Plug 'derekwyatt/vim-scala'
+  Plug 'udalov/kotlin-vim'
+  Plug 'adoy/vim-php-refactoring-toolbox'
+  Plug 'tobyS/pdv'
+  Plug 'tobyS/vmustache'
+  Plug 'tpope/vim-sensible'
+  Plug 'tpope/vim-obsession'
+  Plug 'trusktr/seti.vim'
+  Plug 'posva/vim-vue'
+  Plug 'vim-scripts/dbext.vim'
 call plug#end()
 
-set shell=/bin/bash
+" NETRW style
+let g:netrw_liststyle=3
+
+" CTRLP
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
@@ -75,6 +92,11 @@ augroup END
 " CTRL P
 " set runtimepath^=~/.vim/bundle/ctrlp.vim
 
+" status line
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
 " airline
 set laststatus=2
 let g:airline_theme='luna'
@@ -82,7 +104,8 @@ let g:airline_powerline_fonts=1
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
-  let g:airline_symbols.space = "\ua0"
+let g:airline_symbols.space = "\ua0"
+let g:powerline_pycmd="py3"
 
 " Autocomplete
 filetype plugin on
@@ -90,20 +113,32 @@ set omnifunc=syntaxcomplete#Complete
 
 syntax enable
 set nu
+set mouse=a
 
 " set term=screen-256color
 " let g:solarized_termcolors=256
 " set t_Co=256
+set background=dark
+colorscheme solarized
 
 if has('gui_running')
-  set background=dark
-  colorscheme solarized
   set guifont=Inconsolata\ Medium\ 12
   set guioptions-=m  "remove menu bar
   set guioptions-=T  "remove toolbar
   set guioptions-=r  "remove right-hand scroll bar
   set guioptions-=L  "remove left-hand scroll bar
 endif
+
+" Syntastic global
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" Syntastic golang
+" let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+" let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+let g:go_list_type = "quickfix"
 
 " Syntastic php
 let g:syntastic_phpcs_disable = 1
@@ -116,5 +151,19 @@ nnoremap <C-g> :NERDTreeToggle<CR>
 " Set leader key
 let mapleader = "-"
 
+map <leader>k :Explore<CR>
+
 " Supertab configuration
-let g:SuperTabDefaultCompletionType = ""
+let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+
+" Golang plugin
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_interfaces = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_fmt_command = "goimports"
+
+

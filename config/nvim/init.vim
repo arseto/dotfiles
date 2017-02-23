@@ -19,9 +19,19 @@ call plug#begin('~/.config/site/plugged')
   Plug 'rking/ag.vim'
   Plug 'vim-scripts/taglist.vim'
   Plug 'danro/rename.vim'
-  Plug 'jiangmiao/auto-pairs'
+  " Plug 'jiangmiao/auto-pairs'
   Plug 'bronson/vim-trailing-whitespace'
   Plug 'scrooloose/syntastic'
+  Plug 'vim-scripts/groovy.vim'
+  Plug 'yegappan/mru'
+  Plug 'derekwyatt/vim-scala'
+  Plug 'udalov/kotlin-vim'
+  Plug 'adoy/vim-php-refactoring-toolbox'
+  Plug 'tobyS/pdv'
+  Plug 'tobyS/vmustache'
+  Plug 'tpope/vim-sensible'
+  Plug 'tpope/vim-obsession'
+  Plug 'trusktr/seti.vim'
 call plug#end()
 
 " NETRW style
@@ -122,8 +132,8 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " Syntastic golang
-let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+" let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+" let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 let g:go_list_type = "quickfix"
 
 " Syntastic php
@@ -150,4 +160,5 @@ let g:go_highlight_structs = 1
 let g:go_highlight_interfaces = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+let g:go_fmt_command = "goimports"
 

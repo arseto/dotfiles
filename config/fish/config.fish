@@ -23,13 +23,19 @@ alias gbr="git branch"
 alias gac="git commit -am"
 alias nv="nvim"
 
-set PATH ~/.gem/ruby/1.9.1/bin ~/.gem/ruby/2.2.0/bin ~/.local/bin ~/.gem/ruby/2.3.0/bin ~/.npm-packages/bin/ ~/.composer/bin/ ~/.composer/vendor/bin/ ~/local/bin ~/.conscript/bin/ $PATH
+set PATH ~/.gem/ruby/2.3.0/bin ~/.npm-packages/bin/ ~/.composer/bin/ ~/.composer/vendor/bin/ ~/.conscript/bin/ ~/.sdkman/candidates/grails/current/bin ~/.sdkman/candidates/groovy/current/bin /usr/local/go/bin $PATH
 
 set -x GOPATH $HOME/go
 set -gx PATH $GOPATH/bin $PATH
-set -gx JAVA_HOME /usr/lib/jvm/java-8-openjdk/
+set -gx JAVA_HOME /usr/lib/jvm/java-8-jdk/
+set -gx NVSWAP $HOME/.local/share/nvim/swap/
 
-set -gx GRADLE_HOME /opt/gradle-2.13
-set PATH $GRADLE_HOME/bin $PATH
+# set -gx GRADLE_HOME /opt/gradle-2.13
+# set PATH $GRADLE_HOME/bin $PATH
 
 set -gx XDG_CONFIG_HOME $HOME/.config
+
+#EDITOR
+alias nvswap="ll ~/.local/share/nvim/swap/"
+set fish_key_bindings fish_vi_key_bindings
+
