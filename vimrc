@@ -34,6 +34,9 @@ call plug#begin('~/.config/site/plugged')
   Plug 'trusktr/seti.vim'
   Plug 'posva/vim-vue'
   Plug 'vim-scripts/dbext.vim'
+  Plug 'Xuyuanp/nerdtree-git-plugin'
+  Plug 'karlbright/qfdo.vim'
+  Plug 'artur-shaik/vim-javacomplete2'
 call plug#end()
 
 " NETRW style
@@ -166,4 +169,24 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
 
+" 80th column color
+if (exists('+colorcolumn'))
+    set colorcolumn=80
+    " highlight ColorColumn ctermbg=9
+endif
+
+" Javacomplete 2 " Required
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+" Add smart F4
+nmap <F4> <Plug>(JavaComplete-Imports-AddSmart)
+imap <F4> <Plug>(JavaComplete-Imports-AddSmart)
+" Add F5
+nmap <F5> <Plug>(JavaComplete-Imports-Add)
+imap <F5> <Plug>(JavaComplete-Imports-Add)
+" Add Missing F6
+nmap <F6> <Plug>(JavaComplete-Imports-AddMissing)
+imap <F6> <Plug>(JavaComplete-Imports-AddMissing)
+" Remove unused F7
+nmap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
+imap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
 
