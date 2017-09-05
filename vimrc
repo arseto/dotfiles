@@ -1,7 +1,7 @@
 call plug#begin('~/.config/site/plugged')
   Plug 'ctrlpvim/ctrlp.vim'
-  Plug 'scrooloose/nerdtree'
-  Plug 'shawncplus/phpcomplete.vim'
+  Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+  " Plug 'shawncplus/phpcomplete.vim'
   Plug 'StanAngeloff/php.vim'
   Plug 'ervandew/supertab'
   Plug 'neomake/neomake'
@@ -152,9 +152,15 @@ let g:syntastic_php_checkers = ['php']
 nnoremap <C-g> :NERDTreeToggle<CR>
 
 " Set leader key
-let mapleader = "-"
+let mapleader = ","
 
 map <leader>k :Explore<CR>
+
+" Tab navigation
+map <leader><C-t> :tabnew<CR>
+map <leader><C-w> :tabclose<CR>
+map <leader><C-h> :tabprevious<CR>
+map <leader><C-l> :tabnext<CR>
 
 " Supertab configuration
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
