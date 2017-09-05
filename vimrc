@@ -115,7 +115,7 @@ filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
 syntax enable
-set nu
+set number relativenumber
 set mouse=a
 
 " set term=screen-256color
