@@ -1,6 +1,7 @@
 call plug#begin('~/.config/site/plugged')
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+  Plug 'scrooloose/nerdcommenter'
   " Plug 'shawncplus/phpcomplete.vim'
   Plug 'StanAngeloff/php.vim'
   Plug 'ervandew/supertab'
@@ -19,7 +20,7 @@ call plug#begin('~/.config/site/plugged')
   Plug 'rking/ag.vim'
   Plug 'vim-scripts/taglist.vim'
   Plug 'danro/rename.vim'
-  " Plug 'jiangmiao/auto-pairs'
+  Plug 'jiangmiao/auto-pairs'
   Plug 'bronson/vim-trailing-whitespace'
   Plug 'scrooloose/syntastic'
   Plug 'vim-scripts/groovy.vim'
@@ -37,6 +38,9 @@ call plug#begin('~/.config/site/plugged')
   Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'karlbright/qfdo.vim'
   Plug 'artur-shaik/vim-javacomplete2'
+  Plug 'wesQ3/vim-windowswap'
+  Plug 'kylef/apiblueprint.vim'
+  Plug 'jwalton512/vim-blade'
 call plug#end()
 
 " NETRW style
@@ -159,8 +163,9 @@ map <leader>k :Explore<CR>
 " Tab navigation
 map <leader><C-t> :tabnew<CR>
 map <leader><C-w> :tabclose<CR>
-map <leader><C-h> :tabprevious<CR>
-map <leader><C-l> :tabnext<CR>
+
+" Change case
+nnoremap <leader>sc :s#_\(\l\)#\u\1#g<CR>
 
 " Supertab configuration
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
