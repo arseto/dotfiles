@@ -1,7 +1,8 @@
 call plug#begin('~/.config/site/plugged')
   Plug 'ctrlpvim/ctrlp.vim'
-  Plug 'scrooloose/nerdtree'
-  Plug 'shawncplus/phpcomplete.vim'
+  Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+  Plug 'scrooloose/nerdcommenter'
+  " Plug 'shawncplus/phpcomplete.vim'
   Plug 'StanAngeloff/php.vim'
   Plug 'ervandew/supertab'
   Plug 'neomake/neomake'
@@ -32,6 +33,14 @@ call plug#begin('~/.config/site/plugged')
   Plug 'tpope/vim-sensible'
   Plug 'tpope/vim-obsession'
   Plug 'trusktr/seti.vim'
+  Plug 'posva/vim-vue'
+  Plug 'vim-scripts/dbext.vim'
+  Plug 'Xuyuanp/nerdtree-git-plugin'
+  Plug 'karlbright/qfdo.vim'
+  Plug 'artur-shaik/vim-javacomplete2'
+  Plug 'wesQ3/vim-windowswap'
+  Plug 'kylef/apiblueprint.vim'
+  Plug 'jwalton512/vim-blade'
 call plug#end()
 
 " NETRW style
@@ -102,14 +111,16 @@ let g:airline_powerline_fonts=1
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
-  let g:airline_symbols.space = "\ua0"
+let g:airline_symbols.space = "\ua0"
+let g:powerline_pycmd="py3"
 
 " Autocomplete
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
 syntax enable
-set nu
+set number relativenumber
+set mouse=a
 
 " set term=screen-256color
 " let g:solarized_termcolors=256
@@ -145,9 +156,17 @@ let g:syntastic_php_checkers = ['php']
 nnoremap <C-g> :NERDTreeToggle<CR>
 
 " Set leader key
-let mapleader = "-"
+let mapleader = ","
 
 map <leader>k :Explore<CR>
+
+" Tab navigation
+map <leader><C-t> :tabnew<CR>
+map <leader><C-w> :tabclose<CR>
+
+" Change case
+" From snake to camel
+nnoremap <leader>sc :s#_\(\l\)#\u\1#g<CR>
 
 " Supertab configuration
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
@@ -161,4 +180,25 @@ let g:go_highlight_interfaces = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
+
+" 80th column color
+if (exists('+colorcolumn'))
+    set colorcolumn=80
+    " highlight ColorColumn ctermbg=9
+endif
+
+" Javacomplete 2 " Required
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+" Add smart F4
+nmap <F4> <Plug>(JavaComplete-Imports-AddSmart)
+imap <F4> <Plug>(JavaComplete-Imports-AddSmart)
+" Add F5
+nmap <F5> <Plug>(JavaComplete-Imports-Add)
+imap <F5> <Plug>(JavaComplete-Imports-Add)
+" Add Missing F6
+nmap <F6> <Plug>(JavaComplete-Imports-AddMissing)
+imap <F6> <Plug>(JavaComplete-Imports-AddMissing)
+" Remove unused F7
+nmap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
+imap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
 
