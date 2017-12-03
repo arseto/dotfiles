@@ -20,7 +20,7 @@ call plug#begin('~/.config/site/plugged')
   Plug 'rking/ag.vim'
   Plug 'vim-scripts/taglist.vim'
   Plug 'danro/rename.vim'
-  Plug 'jiangmiao/auto-pairs'
+  " Plug 'jiangmiao/auto-pairs'
   Plug 'bronson/vim-trailing-whitespace'
   Plug 'scrooloose/syntastic'
   Plug 'vim-scripts/groovy.vim'
@@ -165,6 +165,7 @@ map <leader><C-t> :tabnew<CR>
 map <leader><C-w> :tabclose<CR>
 
 " Change case
+" From snake to camel
 nnoremap <leader>sc :s#_\(\l\)#\u\1#g<CR>
 
 " Supertab configuration
