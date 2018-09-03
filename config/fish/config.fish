@@ -23,7 +23,7 @@ alias gbr="git branch"
 alias gac="git commit -am"
 alias nv="nvim"
 
-set PATH ~/.gem/ruby/2.4.0/bin/ ~/.npm-packages/bin/ ~/.composer/bin/ ~/.composer/vendor/bin/ ~/.conscript/bin/ ~/.sdkman/candidates/grails/current/bin ~/.sdkman/candidates/groovy/current/bin /usr/local/go/bin /home/arseto/.local/bin $PATH
+set PATH ~/.gem/ruby/2.5.0/bin/ ~/.gem/ruby/2.4.0/bin/ ~/.npm-packages/bin/ ~/.composer/bin/ ~/.composer/vendor/bin/ ~/.conscript/bin/ ~/.sdkman/candidates/grails/current/bin ~/.sdkman/candidates/groovy/current/bin /usr/local/go/bin /home/arseto/.local/bin $PATH
 
 set -x GOPATH $HOME/go
 set -gx GOROOT /usr/local/go

@@ -41,13 +41,31 @@ call plug#begin('~/.config/site/plugged')
   Plug 'wesQ3/vim-windowswap'
   Plug 'kylef/apiblueprint.vim'
   Plug 'jwalton512/vim-blade'
+  Plug 'mbbill/undotree'
+  Plug 'lumiliet/vim-twig'
 call plug#end()
+
+filetype plugin on
+
+" undotree
+if has("persistent_undo")
+    set undodir=~/.undodir/
+    set undofile
+endi
 
 " NETRW style
 let g:netrw_liststyle=3
 
 " CTRLP
 let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+
+if executable('ag')
+  " Use Ag over Grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
@@ -159,6 +177,7 @@ nnoremap <C-g> :NERDTreeToggle<CR>
 let mapleader = ","
 
 map <leader>k :Explore<CR>
+nnoremap <leader>u :UndotreeToggle<CR>
 
 " Tab navigation
 map <leader><C-t> :tabnew<CR>
