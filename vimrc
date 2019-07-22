@@ -43,6 +43,8 @@ call plug#begin('~/.config/site/plugged')
   Plug 'jwalton512/vim-blade'
   Plug 'mbbill/undotree'
   Plug 'lumiliet/vim-twig'
+  Plug 'vim-latex/vim-latex'
+  Plug 'vim-vdebug/vdebug'
 call plug#end()
 
 filetype plugin on
@@ -64,7 +66,13 @@ if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
 
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  "let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  "let g:ctrlp_user_command = 'ag -l --nocolor -g "" %s'
+  let g:ctrlp_user_command = [
+              \'.git',
+              \'cd %s && git ls-files . -co --exclude-standard',
+              \'ag -l --nocolor -g "" %s'
+              \]
 endif
 
 " Switch syntax highlighting on, when the terminal has colors
