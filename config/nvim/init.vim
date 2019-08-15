@@ -44,6 +44,7 @@ call plug#begin('~/.config/site/plugged')
   Plug 'chiedo/vim-case-convert'
   Plug 'mbbill/undotree'
   Plug 'lumiliet/vim-twig'
+  Plug 'joonty/vim-xdebug'
 call plug#end()
 
 filetype plugin on
@@ -119,7 +120,8 @@ set statusline+=%*
 
 " airline
 set laststatus=2
-let g:airline_theme='luna'
+let g:airline_theme='solarized'
+let g:airline_solarized_bg='dark'
 let g:airline_powerline_fonts=1
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
@@ -203,15 +205,15 @@ endif
 " Javacomplete 2 " Required
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 " Add smart F4
-nmap <F4> <Plug>(JavaComplete-Imports-AddSmart)
-imap <F4> <Plug>(JavaComplete-Imports-AddSmart)
+"nmap <F4> <Plug>(JavaComplete-Imports-AddSmart)
+"imap <F4> <Plug>(JavaComplete-Imports-AddSmart)
 " Add F5
-nmap <F5> <Plug>(JavaComplete-Imports-Add)
-imap <F5> <Plug>(JavaComplete-Imports-Add)
+"nmap <F5> <Plug>(JavaComplete-Imports-Add)
+"imap <F5> <Plug>(JavaComplete-Imports-Add)
 " Add Missing F6
-nmap <F6> <Plug>(JavaComplete-Imports-AddMissing)
-imap <F6> <Plug>(JavaComplete-Imports-AddMissing)
+"nmap <F6> <Plug>(JavaComplete-Imports-AddMissing)
+"imap <F6> <Plug>(JavaComplete-Imports-AddMissing)
 " Remove unused F7
-nmap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
-imap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
+"nmap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
+"imap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
 

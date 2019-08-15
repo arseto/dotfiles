@@ -73,6 +73,9 @@ if executable('ag')
               \'cd %s && git ls-files . -co --exclude-standard',
               \'ag -l --nocolor -g "" %s'
               \]
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
 endif
 
 " Switch syntax highlighting on, when the terminal has colors
