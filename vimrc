@@ -45,6 +45,8 @@ call plug#begin('~/.config/site/plugged')
   Plug 'lumiliet/vim-twig'
   Plug 'vim-latex/vim-latex'
   Plug 'vim-vdebug/vdebug'
+  Plug 'sumpygump/php-documentor-vim'
+  Plug 'MaxMEllon/vim-jsx-pretty'
 call plug#end()
 
 filetype plugin on
@@ -180,6 +182,7 @@ let g:go_list_type = "quickfix"
 let g:syntastic_phpcs_disable = 1
 let g:syntastic_phpmd_disable = 1
 let g:syntastic_php_checkers = ['php']
+let g:syntastic_javascript_checkers = ['eslint']
 
 " File browser with NERDTree
 nnoremap <C-g> :NERDTreeToggle<CR>
@@ -216,6 +219,12 @@ if (exists('+colorcolumn'))
     set colorcolumn=80
     " highlight ColorColumn ctermbg=9
 endif
+
+" phpdoc
+let g:pdv_cfg_Package = 'Polygon\WMS'
+let g:pdv_cfg_Author = 'Arseto Nugroho <seto@tonjoo.com>'
+"au BufRead,BufNewFile *.php inoremap <buffer> <C-P> :call PhpDoc()<CR>
+map <leader><C-p> :call PhpDoc()<CR>
 
 " Javacomplete 2 " Required
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
