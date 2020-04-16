@@ -68,7 +68,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git nvm shrink-path)
+plugins=(git nvm shrink-path zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,6 +99,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 export DEFAULT_USER="arseto"
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
 
 prompt_context() {
     if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
